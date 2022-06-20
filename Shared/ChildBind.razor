@@ -1,0 +1,15 @@
+<p>Year from child <code>@Year</code> years</p>
+
+<button @onclick="updateYear">Update year from child</button>
+
+@code{
+    [Parameter]
+    public int Year { get; set; }
+
+    [Parameter]
+    public EventCallback<int> YearChanged { get; set;}
+
+    async Task updateYear() {
+        await YearChanged.InvokeAsync(this.Year + 1);    
+    }    
+}

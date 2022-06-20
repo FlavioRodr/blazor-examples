@@ -60,3 +60,11 @@
         display: block;
     }
 }
+
+.submenu {
+    display: none;
+}
+
+.expander:checked ~ .submenu {
+    display: block;
+}

@@ -1,0 +1,18 @@
+@page "/Parent"
+
+<p>Parent <code>@year</code> years</p>
+
+<button @onclick="updateYear">Update from parent</button>
+<br>
+<br>
+
+<ChildBind @bind-Year="year"></ChildBind>
+
+@code{
+    int year = 0;
+
+    void updateYear() 
+    {
+        year +=1;        
+    }
+}
